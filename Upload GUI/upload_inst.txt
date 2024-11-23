@@ -1,0 +1,24 @@
+Instructions for Uploading GUI to Board:
+
+1. Download AVRDUDESS (https://blog.zakkemble.net/avrdudess-a-gui-for-avrdude/)
+
+2. Connect board to COM port on computer and find the name of the COM port (this can be done with the arduino ide)
+
+3. Make sure no application is running and accessing the same COM port, such as the arduino ide.
+
+4. run AVRDUDESS as administrator
+
+5. Use the following settings:
+
+Programmer: Wiring
+Port: the COM you found in step 2
+Baud rate: 115200
+FLASH: program_name.ino.hex
+EEPROM: program_name.ino.eep
+Options: -V, -D selected
+MCU: ATmega2560
+presets: Default
+
+nothing else needs to be messed with.
+
+6. Press the Program! button to upload
